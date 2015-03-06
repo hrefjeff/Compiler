@@ -10,24 +10,34 @@ using namespace std;
 int main()
 {
 
-	HashTable myTable;
+	Compiler jeffsCompiler;
 
-	myTable.insert(begin, 1);
-	myTable.insert(end, 2);
-	myTable.insert(end, 2);
-	myTable.insert(end, 2);
+	jeffsCompiler.specifyFile("input.txt");
+	jeffsCompiler.preprocessProgram();
+
+
+	jeffsCompiler.compileProgram();
+	
+
+	jeffsCompiler.printSymbolTable();
+	jeffsCompiler.printErrorTable();
+
+	// myTable.insert(begin, 1);
+	// myTable.insert(end, 2);
+	// myTable.insert(end, 2);
+	// myTable.insert(end, 2);
 	
 	// myTable.insert(begin, 3);
 	// myTable.insert(begin, 4);
 	// myTable.insert(begin, 5);
 	// myTable.insert(begin, 6);
 
-	cout << myTable.search(begin) << endl;
-	cout << myTable.search(tok_if) << endl;
+	// cout << myTable.search(begin) << endl;
+	// cout << myTable.search(tok_if) << endl;
 
-	cout << "------------" << endl;
+	// cout << "------------" << endl;
 
-	myTable.printTable();
+	// myTable.printTable();
 
 	// HashTable Room;
 	// Room.printMap();
