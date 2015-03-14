@@ -39,7 +39,7 @@ int main()
 	return 0;
 }
 
-
+// DFA Recognizer for valid string in language
 void checkString(string someString)
 {
 	int typeOfCharacter;
@@ -91,6 +91,5 @@ bool isLetter(char someChar)
 
 bool isToken()
 {
-	
 	return false;
 }

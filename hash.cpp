@@ -46,7 +46,8 @@ HashTable::~HashTable() {
 void HashTable::printTable()
 {
 	for (int i = 0; i < TABLE_SIZE; i++)
-          cout << "Entry " << i << " address is " << table[i] << endl;
+        if (table[i] != NULL)
+          cout << "Entry " << i << " address is " << table[i]->getValue() << endl;
 }
 
 int HashTable::search(int key) 
