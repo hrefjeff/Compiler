@@ -10,10 +10,10 @@ using namespace std;
 int main()
 {
 
-	Compiler jeffsCompiler;
+	Compiler STAXcompiler;
 
-	jeffsCompiler.specifyFile("input.txt");
-	jeffsCompiler.preprocessProgram();
+	STAXcompiler.specifyFile("input.txt");
+	STAXcompiler.preprocessProgram();
 
 
 	jeffsCompiler.compileProgram();

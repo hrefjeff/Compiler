@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+enum Tokens { BEGIN, END, END., VAR  };
+
 bool checkString(string);
 
 int main()

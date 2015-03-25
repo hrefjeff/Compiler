@@ -6,7 +6,7 @@ using namespace std;
 enum STATES {q0, q1, q2, qerr};
 enum ALPHABET {letter, digit, underscore, delimiter};
 
-int stateDiagram[4][4]
+int stateDiagram[4][4] = 
 	{
 		/*--------letter,digit,underscore,delimiter ----------*/
 		/*--q0--*/{q1   ,qerr ,qerr      ,q0},
@@ -14,6 +14,17 @@ int stateDiagram[4][4]
 		/*--q2--*/{q0   ,q0   ,q0        ,q0},
 		/*--qerr*/{qerr ,qerr ,qerr      ,qerr}
 	};
+
+	/* 
+
+	--------   T  ,  O          ----------
+	--q0--  {q1   ,qerr }
+	--q1--  {qerr ,q2   }
+	--q2--  {qerr ,qerr }
+	--qerr  {qerr ,qerr }
+
+
+	*/
 
 void checkString(string);
 bool isDigit(char);
